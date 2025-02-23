@@ -1,0 +1,215 @@
+country_num,Country Name,Country Code,mig_stock
+1,Afghanistan,AFG,5055219
+2,Albania,ALB,1194524
+3,Algeria,DZA,1832881
+4,American Samoa,ASM,3581
+5,Andorra,AND,8381
+6,Angola,AGO,661595
+7,Antigua and Barbuda,ATG,72895
+8,Argentina,ARG,996045
+9,Armenia,ARM,968686
+10,Aruba,ABW,17364
+11,Australia,AUS,579519
+12,Austria,AUT,510454
+13,Azerbaijan,AZE,1215260
+14,"Bahamas, The",BHS,44235
+15,Bahrain,BHR,63689
+16,Bangladesh,BGD,7796958
+17,Barbados,BRB,99754
+18,Belarus,BLR,1646080
+19,Belgium,BEL,560934
+20,Belize,BLZ,58683
+21,Benin,BEN,657594
+22,Bermuda,BMU,16726
+23,Bhutan,BTN,47077
+24,Bolivia,BOL,880525
+25,Bosnia and Herzegovina,BIH,1638113
+26,Botswana,BWA,82914
+27,Brazil,BRA,1690461
+28,Brunei Darussalam,BRN,47460
+29,Bulgaria,BGR,1475224
+30,Burkina Faso,BFA,1518063
+31,Burundi,BDI,466962
+32,Cabo Verde,CPV,237921
+33,Cambodia,KHM,1114226
+34,Cameroon,CMR,400165
+35,Canada,CAN,1275773
+36,Cayman Islands,CYM,5320
+37,Central African Republic,CAF,728216
+38,Chad,TCD,411961
+39,Channel Islands,CHI,26639
+40,Chile,CHL,628577
+41,China,CHN,10058110
+42,Colombia,COL,2745620
+43,Comoros,COM,61055
+44,"Congo, Dem. Rep.",COD,1849863
+45,"Congo, Rep.",COG,292508
+46,Costa Rica,CRI,143284
+47,Cote d'Ivoire,CIV,1065361
+48,Croatia,HRV,1057020
+49,Cuba,CUB,1598694
+50,Curacao,CUW,75131
+51,Cyprus,CYP,179282
+52,Czech Republic,CZE,484685
+53,Denmark,DNK,259278
+54,Djibouti,DJI,18082
+55,Dominica,DMA,67530
+56,Dominican Republic,DOM,1488325
+57,Ecuador,ECU,1100472
+58,"Egypt, Arab Rep.",EGY,3444831
+59,El Salvador,SLV,1559932
+60,Equatorial Guinea,GNQ,133910
+61,Eritrea,ERI,645445
+62,Estonia,EST,201868
+63,Eswatini,SWZ,94196
+64,Ethiopia,ETH,847712
+65,Faroe Islands,FRO,16207
+66,Fiji,FJI,209370
+67,Finland,FIN,292426
+68,France,FRA,2072313
+69,French Polynesia,PYF,3906
+70,Gabon,GAB,83129
+71,"Gambia, The",GMB,106525
+72,Georgia,GEO,875753
+73,Germany,DEU,4141718
+74,Ghana,GHA,865202
+75,Greece,GRC,1000069
+76,Greenland,GRL,20948
+77,Grenada,GRD,69094
+78,Guam,GUM,2774
+79,Guatemala,GTM,1071030
+80,Guinea,GIN,467024
+81,Guinea-Bissau,GNB,105942
+82,Guyana,GUY,456100
+83,Haiti,HTI,1257053
+84,Honduras,HND,790989
+85,"Hong Kong SAR, China",HKG,1059311
+86,Hungary,HUN,705169
+87,Iceland,ISL,39875
+88,India,IND,16443947
+89,Indonesia,IDN,4247592
+90,"Iran, Islamic Rep.",IRN,1237343
+91,Iraq,IRQ,1932429
+92,Ireland,IRL,770853
+93,Isle of Man,IMN,9196
+94,Israel,ISR,356070
+95,Italy,ITA,3236049
+96,Jamaica,JAM,1055452
+97,Japan,JPN,1056259
+98,Jordan,JOR,769025
+99,Kazakhstan,KAZ,3945105
+100,Kenya,KEN,523355
+101,Kiribati,KIR,5814
+102,"Korea, Dem. People’s Rep.",PRK,160919
+103,"Korea, Rep.",KOR,2418233
+104,Kosovo,XKX,561424
+105,Kuwait,KWT,210727
+106,Kyrgyz Republic,KGZ,781950
+107,Lao PDR,LAO,1291433
+108,Latvia,LVA,397744
+109,Lebanon,LBN,816267
+110,Lesotho,LSO,327926
+111,Liberia,LBR,405732
+112,Libya,LBY,181279
+113,Liechtenstein,LIE,3899
+114,Lithuania,LTU,652985
+115,Luxembourg,LUX,71545
+116,"Macao SAR, China",MAC,144684
+117,Madagascar,MDG,153617
+118,Malawi,MWI,355595
+119,Malaysia,MYS,1892733
+120,Maldives,MDV,3191
+121,Mali,MLI,1142953
+122,Malta,MLT,108313
+123,Marshall Islands,MHL,9764
+124,Mauritania,MRT,158020
+125,Mauritius,MUS,164006
+126,Mexico,MEX,11881698
+127,"Micronesia, Fed. Sts.",FSM,32869
+128,Moldova,MDA,1024551
+129,Monaco,MCO,53763
+130,Mongolia,MNG,81311
+131,Montenegro,MNE,261641
+132,Morocco,MAR,3045788
+133,Mozambique,MOZ,954040
+134,Myanmar,MMR,2947287
+135,Namibia,NAM,192392
+136,Nepal,NPL,2005848
+137,Netherlands,NLD,1006968
+138,New Caledonia,NCL,5266
+139,New Zealand,NZL,807137
+140,Nicaragua,NIC,629892
+141,Niger,NER,383917
+142,Nigeria,NGA,1309060
+143,North Macedonia,MKD,564949
+144,Northern Mariana Islands,MNP,10202
+145,Norway,NOR,190347
+146,Oman,OMN,26240
+147,Pakistan,PAK,6098502
+148,Palau,PLW,5959
+149,Panama,PAN,133525
+150,Papua New Guinea,PNG,40850
+151,Paraguay,PRY,895988
+152,Peru,PER,1487213
+153,Philippines,PHL,5970104
+154,Poland,POL,4294296
+155,Portugal,PRT,2288235
+156,Puerto Rico,PRI,1935837
+157,Qatar,QAT,27270
+158,Romania,ROU,3662849
+159,Russian Federation,RUS,10961149
+160,Rwanda,RWA,606728
+161,Samoa,WSM,134611
+162,San Marino,SMR,3303
+163,Sao Tome and Principe,STP,84766
+164,Saudi Arabia,SAU,313824
+165,Senegal,SEN,641978
+166,Serbia,SRB,1014577
+167,Seychelles,SYC,37933
+168,Sierra Leone,SLE,374691
+169,Singapore,SGP,337923
+170,Sint Maarten (Dutch part),SXM,26338
+171,Slovak Republic,SVK,612186
+172,Slovenia,SVN,171202
+173,Solomon Islands,SLB,4220
+174,Somalia,SOM,2032921
+175,South Africa,ZAF,934254
+176,South Sudan,SSD,2018258
+177,Spain,ESP,1450566
+178,Sri Lanka,LKA,1728371
+179,St. Kitts and Nevis,KNA,37624
+180,St. Lucia,LCA,54465
+181,St. Martin (French part),MAF,6
+182,St. Vincent and the Grenadines,VCT,55928
+183,Sudan,SDN,2019643
+184,Suriname,SUR,233881
+185,Sweden,SWE,312757
+186,Switzerland,CHE,643954
+187,Syrian Arab Republic,SYR,7775786
+188,Tajikistan,TJK,638249
+189,Tanzania,TZA,322829
+190,Thailand,THA,993253
+191,Timor-Leste,TLS,38235
+192,Togo,TGO,524460
+193,Tonga,TON,62107
+194,Trinidad and Tobago,TTO,371423
+195,Tunisia,TUN,785623
+196,Turkey,TUR,3037921
+197,Turkmenistan,TKM,258256
+198,Turks and Caicos Islands,TCA,3114
+199,Tuvalu,TUV,4136
+200,Uganda,UGA,775891
+201,Ukraine,UKR,5995314
+202,United Arab Emirates,ARE,180089
+203,United Kingdom,GBR,4812435
+204,United States,USA,3031478
+205,Uruguay,URY,351041
+206,Uzbekistan,UZB,2071103
+207,Vanuatu,VUT,9041
+208,"Venezuela, RB",VEN,771986
+209,Vietnam,VNM,2694269
+210,Virgin Islands (U.S.),VIR,4103
+211,West Bank and Gaza,PSE,3857805
+212,"Yemen, Rep.",YEM,1221130
+213,Zambia,ZMB,278334
+214,Zimbabwe,ZWE,738195
