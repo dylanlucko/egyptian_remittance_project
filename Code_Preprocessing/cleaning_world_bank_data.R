@@ -15,7 +15,7 @@ library(tidyr)
 
 # Define file path
 file_path_reer <- "C:/Users/dlucko/Documents/GitHub/egyptian_remittance_project/Data_Pre_Panel_2025_Paper_Update/all_countries_real_effective_exchange_rate_annual.csv"
-output_file_path_reer <- "C:/Users/dlucko/Documents/GitHub/egyptian_remittance_project/Data_Clean_Pre_Panel_2025_Paper_Update/all_countries_real_effective_exchange_rate_clean.csv"
+output_file_path_reer <- "C:/Users/dlucko/Documents/GitHub/egyptian_remittance_project/Data_Pre_Panel_2025_Paper_Update_Clean/all_countries_real_effective_exchange_rate_clean.csv"
 
 # Read CSV while skipping the first 4 rows
 reer_wide <- read_csv(file_path_reer, skip = 4, show_col_types = FALSE)
@@ -48,7 +48,7 @@ rm(reer,reer_wide, reer_long, output_file_path_reer, file_path_reer)
 
 # Define file path
 file_path_inflation_rate <- "C:/Users/dlucko/Documents/GitHub/egyptian_remittance_project/Data_Pre_Panel_2025_Paper_Update/all_countries_inflation_rate_annual.csv"
-output_file_path_inflation_rate <- "C:/Users/dlucko/Documents/GitHub/egyptian_remittance_project/Data_Clean_Pre_Panel_2025_Paper_Update/all_countries_inflation_rate_annual_clean.csv"
+output_file_path_inflation_rate <- "C:/Users/dlucko/Documents/GitHub/egyptian_remittance_project/Data_Pre_Panel_2025_Paper_Update_Clean/all_countries_inflation_rate_annual_clean.csv"
 
 # Read CSV while skipping the first 4 rows
 inflation_wide <- read_csv(file_path_inflation_rate, skip = 4, show_col_types = FALSE)
@@ -82,7 +82,7 @@ rm(inflation, inflation_wide, output_file_path_inflation_rate, file_path_inflati
 
 # Define file path
 file_path_labor_force <- "C:/Users/dlucko/Documents/GitHub/egyptian_remittance_project/Data_Pre_Panel_2025_Paper_Update/all_countries_labor_force.csv"
-output_file_path_labor_force <- "C:/Users/dlucko/Documents/GitHub/egyptian_remittance_project/Data_Clean_Pre_Panel_2025_Paper_Update/all_countries_labor_force_clean.csv"
+output_file_path_labor_force <- "C:/Users/dlucko/Documents/GitHub/egyptian_remittance_project/Data_Pre_Panel_2025_Paper_Update_Clean/all_countries_labor_force_clean.csv"
 
 # Read CSV while skipping the first 4 rows
 labor_force_wide <- read_csv(file_path_labor_force, skip = 4, show_col_types = FALSE)
@@ -117,7 +117,7 @@ rm(labor_force, labor_force_wide, output_file_path_labor_force, file_path_labor_
 
 # Define file path
 file_path_population <- "C:/Users/dlucko/Documents/GitHub/egyptian_remittance_project/Data_Pre_Panel_2025_Paper_Update/all_countries_population.csv"
-output_file_path_population <- "C:/Users/dlucko/Documents/GitHub/egyptian_remittance_project/Data_Clean_Pre_Panel_2025_Paper_Update/all_countries_population_clean.csv"
+output_file_path_population <- "C:/Users/dlucko/Documents/GitHub/egyptian_remittance_project/Data_Pre_Panel_2025_Paper_Update_Clean/all_countries_population_clean.csv"
 
 # Read CSV while skipping the first 4 rows
 population_wide <- read_csv(file_path_population, skip = 4, show_col_types = FALSE)
@@ -153,7 +153,7 @@ rm(population, population_wide, output_file_path_population, file_path_populatio
 
 # Define file path
 file_path_foreign_direct_investment <- "C:/Users/dlucko/Documents/GitHub/egyptian_remittance_project/Data_Pre_Panel_2025_Paper_Update/all_countries_foreign_direct_investment_net_inflows.csv"
-output_file_path_foreign_direct_investment <- "C:/Users/dlucko/Documents/GitHub/egyptian_remittance_project/Data_Clean_Pre_Panel_2025_Paper_Update/all_countries_foreign_direct_investment_net_inflows_clean.csv"
+output_file_path_foreign_direct_investment <- "C:/Users/dlucko/Documents/GitHub/egyptian_remittance_project/Data_Pre_Panel_2025_Paper_Update_Clean/all_countries_foreign_direct_investment_net_inflows_clean.csv"
 
 # Read CSV while skipping the first 4 rows
 foreign_direct_investment_wide <- read_csv(file_path_foreign_direct_investment, skip = 4, show_col_types = FALSE)
@@ -188,7 +188,7 @@ rm(foreign_direct_investment, foreign_direct_investment_wide, output_file_path_f
 
 # Define file path
 file_path_unemployment <- "C:/Users/dlucko/Documents/GitHub/egyptian_remittance_project/Data_Pre_Panel_2025_Paper_Update/all_countries_unemployment_rate_pct_of_total_labor_force.csv"
-output_file_path_unemployment <- "C:/Users/dlucko/Documents/GitHub/egyptian_remittance_project/Data_Clean_Pre_Panel_2025_Paper_Update/all_countries_unemployment_rate_pct_of_total_labor_force_clean.csv"
+output_file_path_unemployment <- "C:/Users/dlucko/Documents/GitHub/egyptian_remittance_project/Data_Pre_Panel_2025_Paper_Update_Clean/all_countries_unemployment_rate_pct_of_total_labor_force_clean.csv"
 
 # Read CSV while skipping the first 4 rows
 unemployment_wide <- read_csv(file_path_unemployment, skip = 4, show_col_types = FALSE)
@@ -211,5 +211,186 @@ mean(unemployment$unemployment, na.rm = T)
 
 write.csv(unemployment, output_file_path_unemployment)
 rm(unemployment, unemployment_wide, output_file_path_unemployment, file_path_unemployment)
+
+
+
+###################
+###################
+################### Clean GDP Per Capita ###############
+###################
+###################
+
+
+# Define file path
+file_path_gdp_per_capita <- "C:/Users/dlucko/Documents/GitHub/egyptian_remittance_project/Data_Pre_Panel_2025_Paper_Update/all_countries_gdp_per_capita_current_US_DOLLAR.csv"
+output_file_path_gdp_per_capita <- "C:/Users/dlucko/Documents/GitHub/egyptian_remittance_project/Data_Pre_Panel_2025_Paper_Update_Clean/all_countries_gdp_per_capita_current_US_DOLLAR_clean.csv"
+
+# Read CSV while skipping the first 4 rows
+gdp_per_capita_wide <- read_csv(file_path_gdp_per_capita, skip = 4, show_col_types = FALSE)
+
+# Convert to long format: "Country Name", "Country Code" remain, years become a "Year" column
+gdp_per_capita <- gdp_per_capita_wide %>%
+  pivot_longer(cols = -c(`Country Name`, `Country Code`, `Indicator Name`, `Indicator Code`),
+               names_to = "Year", values_to = "Value") %>%
+  mutate(Year = as.integer(Year))  # Ensure Year is numeric
+
+# Keep only necessary columns
+gdp_per_capita <- gdp_per_capita %>%
+  select(`Country Name`, `Country Code`, Year, Value)
+
+gdp_per_capita <- gdp_per_capita %>%
+  rename(gdp_per_capita = Value, country = `Country Name`, country_code = `Country Code` )
+# View the first few rows
+head(gdp_per_capita)
+mean(gdp_per_capita$gdp_per_capita, na.rm = T)
+
+write.csv(gdp_per_capita, output_file_path_gdp_per_capita)
+rm(gdp_per_capita, gdp_per_capita_wide, output_file_path_gdp_per_capita, file_path_gdp_per_capita)
+
+
+
+
+###################
+###################
+################### Clean GDP  ###############
+###################
+###################
+
+
+# Define file path
+file_path_gdp <- "C:/Users/dlucko/Documents/GitHub/egyptian_remittance_project/Data_Pre_Panel_2025_Paper_Update/all_countries_gross_domestic_product_current_US_DOLLAR.csv"
+output_file_path_gdp <- "C:/Users/dlucko/Documents/GitHub/egyptian_remittance_project/Data_Pre_Panel_2025_Paper_Update_Clean/all_countries_gross_domestic_product_current_US_DOLLAR_clean.csv"
+
+# Read CSV while skipping the first 4 rows
+gdp_wide <- read_csv(file_path_gdp, skip = 4, show_col_types = FALSE)
+
+# Convert to long format: "Country Name", "Country Code" remain, years become a "Year" column
+gdp <- gdp_wide %>%
+  pivot_longer(cols = -c(`Country Name`, `Country Code`, `Indicator Name`, `Indicator Code`),
+               names_to = "Year", values_to = "Value") %>%
+  mutate(Year = as.integer(Year))  # Ensure Year is numeric
+
+# Keep only necessary columns
+gdp <- gdp %>%
+  select(`Country Name`, `Country Code`, Year, Value)
+
+gdp <- gdp %>%
+  rename(gdp = Value, country = `Country Name`, country_code = `Country Code` )
+# View the first few rows
+head(gdp)
+mean(gdp$gdp, na.rm = T)
+
+write.csv(gdp, output_file_path_gdp)
+rm(gdp, gdp_wide, output_file_path_gdp, file_path_gdp)
+
+
+
+
+###################
+###################
+################### Clean Personal Remittances Received  ###############
+###################
+###################
+
+
+# Define file path
+file_path_personal_remittances_received <- "C:/Users/dlucko/Documents/GitHub/egyptian_remittance_project/Data_Pre_Panel_2025_Paper_Update/all_countries_personal_remittances_annual_current_US_DOLLAR.csv"
+output_file_path_personal_remittances_received <- "C:/Users/dlucko/Documents/GitHub/egyptian_remittance_project/Data_Pre_Panel_2025_Paper_Update_Clean/all_countries_personal_remittances_annual_current_US_DOLLAR_clean.csv"
+
+# Read CSV while skipping the first 4 rows
+personal_remittances_received_wide <- read_csv(file_path_personal_remittances_received, skip = 4, show_col_types = FALSE)
+
+# Convert to long format: "Country Name", "Country Code" remain, years become a "Year" column
+personal_remittances_received <- personal_remittances_received_wide %>%
+  pivot_longer(cols = -c(`Country Name`, `Country Code`, `Indicator Name`, `Indicator Code`),
+               names_to = "Year", values_to = "Value") %>%
+  mutate(Year = as.integer(Year))  # Ensure Year is numeric
+
+# Keep only necessary columns
+personal_remittances_received <- personal_remittances_received %>%
+  select(`Country Name`, `Country Code`, Year, Value)
+
+personal_remittances_received <- personal_remittances_received %>%
+  rename(personal_remittances_received = Value, country = `Country Name`, country_code = `Country Code` )
+# View the first few rows
+head(personal_remittances_received)
+mean(personal_remittances_received$personal_remittances_received, na.rm = T)
+
+write.csv(personal_remittances_received, output_file_path_personal_remittances_received)
+rm(personal_remittances_received, personal_remittances_received_wide, output_file_path_personal_remittances_received, file_path_personal_remittances_received)
+
+
+
+###################
+###################
+################### Clean Personal Remittances Pct GDP  ###############
+###################
+###################
+
+
+# Define file path
+file_path_personal_remittances_pct_gdp <- "C:/Users/dlucko/Documents/GitHub/egyptian_remittance_project/Data_Pre_Panel_2025_Paper_Update/all_countries_personal_remittances_annual_pct_of_gdp.csv"
+output_file_path_personal_remittances_pct_gdp  <- "C:/Users/dlucko/Documents/GitHub/egyptian_remittance_project/Data_Pre_Panel_2025_Paper_Update_Clean/all_countries_personal_remittances_annual_pct_of_gdp_clean.csv"
+
+# Read CSV while skipping the first 4 rows
+personal_remittances_pct_gdp_wide <- read_csv(file_path_personal_remittances_pct_gdp, skip = 4, show_col_types = FALSE)
+
+# Convert to long format: "Country Name", "Country Code" remain, years become a "Year" column
+personal_remittances_pct_gdp  <- personal_remittances_pct_gdp_wide %>%
+  pivot_longer(cols = -c(`Country Name`, `Country Code`, `Indicator Name`, `Indicator Code`),
+               names_to = "Year", values_to = "Value") %>%
+  mutate(Year = as.integer(Year))  # Ensure Year is numeric
+
+# Keep only necessary columns
+personal_remittances_pct_gdp  <- personal_remittances_pct_gdp  %>%
+  select(`Country Name`, `Country Code`, Year, Value)
+
+personal_remittances_pct_gdp  <- personal_remittances_pct_gdp  %>%
+  rename(personal_remittances_pct_gdp  = Value, country = `Country Name`, country_code = `Country Code` )
+# View the first few rows
+head(personal_remittances_pct_gdp )
+mean(personal_remittances_pct_gdp $personal_remittances_pct_gdp , na.rm = T)
+
+write.csv(personal_remittances_pct_gdp , output_file_path_personal_remittances_pct_gdp)
+rm(personal_remittances_pct_gdp , personal_remittances_pct_gdp_wide, output_file_path_personal_remittances_pct_gdp, file_path_personal_remittances_pct_gdp)
+
+
+
+###################
+###################
+################### Clean Net Migration  ###############
+###################
+###################
+
+
+# Define file path
+file_path_net_migration <- "C:/Users/dlucko/Documents/GitHub/egyptian_remittance_project/Data_Pre_Panel_2025_Paper_Update/all_countries_net_migration.csv"
+output_file_path_net_migration  <- "C:/Users/dlucko/Documents/GitHub/egyptian_remittance_project/Data_Pre_Panel_2025_Paper_Update_Clean/all_countries_net_migration_clean.csv"
+
+# Read CSV while skipping the first 4 rows
+net_migration_wide <- read_csv(file_path_net_migration, skip = 4, show_col_types = FALSE)
+
+# Convert to long format: "Country Name", "Country Code" remain, years become a "Year" column
+net_migration  <- net_migration_wide %>%
+  pivot_longer(cols = -c(`Country Name`, `Country Code`, `Indicator Name`, `Indicator Code`),
+               names_to = "Year", values_to = "Value") %>%
+  mutate(Year = as.integer(Year))  # Ensure Year is numeric
+
+# Keep only necessary columns
+net_migration  <- net_migration  %>%
+  select(`Country Name`, `Country Code`, Year, Value)
+
+net_migration  <- net_migration  %>%
+  rename(net_migration  = Value, country = `Country Name`, country_code = `Country Code` )
+# View the first few rows
+head(net_migration )
+mean(net_migration $net_migration , na.rm = T)
+
+write.csv(net_migration , output_file_path_net_migration)
+rm(net_migration , net_migration_wide, output_file_path_net_migration, file_path_net_migration)
+
+
+
+
 
 
